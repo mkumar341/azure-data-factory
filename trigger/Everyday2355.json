@@ -1,0 +1,38 @@
+{
+	"name": "Everyday2355",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "MoveFiles",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"SourceStore_Location": "sink",
+					"SourceStore_Directory": "sink",
+					"DestinationStore_Location": "staging",
+					"DestinationStore_Directory": "staging"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-04-27T18:20:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						55
+					],
+					"hours": [
+						23
+					]
+				}
+			}
+		}
+	}
+}
